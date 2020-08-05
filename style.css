@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: transform .5s;
+}
+
+nav {
+    background-color: #008fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+nav a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav button {
+    background-color: #ffa800;
+    color: #ffffff;
+}
+
+#nav-logo {
+    text-align: center;
+}
+
+#nav-logo img{
+    width: 70%;
+}
+
+#nav-ul {
+    display: flex;
+}
+
+#nav-ul li {
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 0 12px;
+    transition-duration: 500ms;
+}
+
+#nav-ul li:hover {
+    opacity: .8 ;
+}
+
+#nav-link {
+    display: none;
+}
+
+
+/* --------- for side navbar ---------------*/
+#mobile-link {
+    display: none;
+    width: 40vw;
+    height: 100vh;
+    transform: translateX(-40vw);
+    transition: all .5s;
+}
+
+#mobile-link a {
+    text-decoration: none;
+}
+
+#close-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+#close-nav-1 {
+    font-size: 15px;
+    padding-right: 10px;
+    margin-right: 40px;
+    color: #222222;
+}
+
+#close-nav-2 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 10px;
+    color: #222222;
+}
+
+#close-nav-ul {
+    text-transform: capitalize;
+    font-size: 13px;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+#close-nav-ul li {
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+#close-nav-ul a {
+    color: #888888;
+}
+
+#close-nav-ul a:hover {
+    color: #222222;
+}
+
+#close-nav-button {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#close-nav-button button {
+    cursor: pointer;
+    border: 1px solid #008fff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    background-color: #008fff;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0 10px 25px 0 rgba(0, 143, 255, 0.3);
+    transition: all .5s;
+}
+
+#close-nav-button button:hover {
+    background-color: #ffffff;
+    color: #008fff;
+}
+
+#button-link {
+    box-shadow: 0 10px 25px 0 rgba(255, 168, 0, 0.3);
+    border-radius: 25px;
+}
+
+#nav-button {
+    cursor: pointer;
+    border: 1px solid #ffa800;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 15px 25px;
+    transition: all 0.35s ease;
+}
+
+#nav-button:hover {
+    background-color: transparent;
+    border: 1px solid #ffa800;
+    color: #ffa800;
+    box-shadow: none;
+}
+
+
+@media only screen and (max-width: 1175px){
+
+    main{
+        width: 100vw;
+    }
+    
+    #nav-logo {
+        margin-right: auto;
+        margin-left: 120px;
+    }
+
+    #nav-logo img {
+        width: 90%;
+    }
+    #nav-ul {
+        display: none;
+    }
+
+    #nav-link {
+        margin-right: 80px;
+        display: block;
+        transition: all 0.5s linear;
+    }
+
+    #hamburgur {
+        width: 40px;
+        height: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hamburgur span {
+        width: 30px;
+        height: 2px;
+        margin-bottom: 4px;
+        border-bottom: 1px solid white;
+    }
+
+    #button-link {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 1000px){
+    main{
+        width: 100vw;
+    }
+    #nav-logo {
+        margin-left: 20px;
+    }
+    #close-nav-ul li {
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    main{
+        width: 100vw;
+    }
+    #close-nav-ul li {
+        padding-left: 20px;
+    }
+    #close-nav-ul a {
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    #mobile-link {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    main{
+        width: 100vw;
+    }
+    #nav-link {
+        margin-right: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 450px){
+    main{
+        width: 100vw;
+    }
+    #mobile-link {
+        width: 80vw;
+    }
+}
+
+#dimmed-bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    visibility: hidden;
+    background-color: rgba(20, 20, 20, 0.86);
+
+}
