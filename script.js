@@ -56,3 +56,58 @@ window.addEventListener('resize', ()=>{
         closeNav();
     }
 })
+
+// javascript for hovering over nav options
+const nav = document.querySelector('nav');
+
+
+const items = document.querySelectorAll('.nav-li-a');
+
+
+
+items.forEach((item) => {
+    listNumber = item.dataset.number;
+
+    option = document.querySelector(`div[data-option="${listNumber}"]`);
+    option.style.opacity = '0';
+    option.style.height = '0';
+})
+
+
+let hideOption = () => {
+    option.style.opacity = '1';
+    option.style.height = 'fit-content';
+    option.style.animationDelay = '50ms';
+    option.style.animationIterationCount = 'infinite';
+    option.style.animationName = 'hide';
+}
+
+
+items.forEach( (item) => {
+    item.addEventListener('mouseenter', () => {
+        listNumber = item.dataset.number;
+
+        option = document.querySelector(`div[data-option="${listNumber}"]`);
+        
+        option.style.opacity = '0';
+        option.style.height = '0%';
+        option.style.animationDelay = '300ms'
+        option.style.animationName = 'show'
+        
+
+        item.addEventListener('mouseout', () => {
+            hideOption();
+        })
+
+        option.addEventListener('mouseenter', () => {
+            option.style.animationDelay = '300ms'
+            option.style.animationName = 'show';
+        })
+
+        option.addEventListener('mouseleave', () => {
+            hideOption();
+        })
+
+    })
+});
+
