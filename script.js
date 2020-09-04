@@ -7,6 +7,7 @@ const dimmedBg = document.querySelector('#dimmed-bg');
 
 const closeNav1 = document.querySelector('#close-nav-1');
 const closeNav2 = document.querySelector('#close-nav-2');
+console.log('hello')
 
 function sideNavBar() {
     var w = window.innerWidth;
